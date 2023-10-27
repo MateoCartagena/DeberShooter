@@ -18,7 +18,7 @@ public class Laser : MonoBehaviour
     private int esferasDestruidas = 0;
 
     private string textoContador;
-    public TextMeshProUGUI contadorTexto;
+    public TextMeshProUGUI textoEnPantalla;
  
     LineRenderer laserLine;
     float fireTimer;
@@ -26,7 +26,7 @@ public class Laser : MonoBehaviour
     void Awake()
     {
         laserLine = GetComponent<LineRenderer>();
-        contadorTexto = GetComponent<TextMeshProUGUI>();
+        textoEnPantalla = GetComponent<TextMeshProUGUI>();
     }
  
     void Update()
@@ -74,7 +74,7 @@ public class Laser : MonoBehaviour
 
 
                 textoContador = "Cubos: " + cubosDestruidos + "\nEsferas: " + esferasDestruidas;
-                contadorTexto.text = textoContador;
+                textoEnPantalla.text = textoContador + "HOLAAA";
             
             }
             else
